@@ -9,6 +9,9 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        namespace: sa-token
     gateway:
       routes: #配置路由路径
         - id: oauth2-api-route

@@ -9,6 +9,9 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        namespace: sa-token
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
   redis:
