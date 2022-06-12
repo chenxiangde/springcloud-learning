@@ -32,7 +32,7 @@ public class UserServiceImpl {
                 .roleList(CollUtil.toList("super-admin", "admin"))
                 .build());
         userList.add(UserDTO.builder()
-                .id(1L)
+                .id(2L)
                 .username("macro")
                 .password(SaSecureUtil.md5("123456"))
                 .permissionList(CollUtil.toList("api:user:info"))
