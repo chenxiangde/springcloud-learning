@@ -3,6 +3,7 @@ package com.macro.cloud.controller;
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
 import com.macro.cloud.api.CommonResult;
+import com.macro.cloud.api.ResultCode;
 import com.macro.cloud.service.UserServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -37,9 +38,23 @@ public class UserController {
         return CommonResult.success(tokenMap);
     }
 
+    @ApiOperation(value = "当前会话注销登录")
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public CommonResult logout() {
+        StpUtil.logout();
+        return CommonResult.success("注销登录");
+    }
+
     @ApiOperation(value = "查询当前登录状态")
     @RequestMapping(value = "/isLogin", method = RequestMethod.GET)
     public CommonResult isLogin() {
         return CommonResult.success(StpUtil.isLogin());
+    }
+
+    @ApiOperation(value = "检验当前会话是否已经登录, 如果未登录，则抛出异常NotLoginException")
+    @RequestMapping(value = "/checkLogin", method = RequestMethod.GET)
+    public CommonResult checkLogin() {
+        StpUtil.checkLogin();
+        return CommonResult.success("已经登录");
     }
 }
