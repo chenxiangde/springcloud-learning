@@ -9,12 +9,13 @@ import java.util.List;
 
 /**
  * 网关白名单配置
- * Created by macro on 2020/6/17.
+ * Created by cxd.
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Component
 @ConfigurationProperties(prefix="secure.ignore")
 public class IgnoreUrlsConfig {
+
     private List<String> urls;
 }

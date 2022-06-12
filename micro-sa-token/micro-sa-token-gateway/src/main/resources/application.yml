@@ -60,5 +60,15 @@ sa-token:
 secure:
   ignore:
     urls: #配置白名单路径
-      - "/actuator/**"
-      - "/auth/user/login"
+      - /
+      - /swagger-ui/
+      - /*.html
+      - /favicon.ico
+      - /**/*.html
+      - /**/*.css
+      - /**/*.js
+      - /swagger-resources/**
+      - /v2/api-docs/**
+      - /actuator/**
+      - /auth/user/login
+      - /auth/user/isLogin
