@@ -23,7 +23,6 @@ public class UserServiceImpl{
 
     @PostConstruct
     public void initData() {
-        String password = SaSecureUtil.md5("123456");
         userList = new ArrayList<>();
         userList.add(UserDTO.builder()
                 .id(1L)
