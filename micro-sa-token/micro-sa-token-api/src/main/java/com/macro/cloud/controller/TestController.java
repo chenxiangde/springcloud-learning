@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 测试接口
- * Created by macro on 2020/6/19.
+ * Created by cxd.
  */
 @Api(tags = "TestController", description = "测试接口")
 @RestController
