@@ -29,13 +29,15 @@ public class UserServiceImpl{
                 .id(1L)
                 .username("admin")
                 .password(SaSecureUtil.md5("123456"))
-                .permissionList(CollUtil.toList("api:user:info","api:test:hello"))
+                .permissionList(CollUtil.toList("api:user:info", "api:test:hello"))
+                .roleList(CollUtil.toList("super-admin", "admin"))
                 .build());
         userList.add(UserDTO.builder()
                 .id(1L)
                 .username("macro")
                 .password(SaSecureUtil.md5("123456"))
                 .permissionList(CollUtil.toList("api:user:info"))
+                .roleList(CollUtil.toList("admin", "user"))
                 .build());
     }
 
