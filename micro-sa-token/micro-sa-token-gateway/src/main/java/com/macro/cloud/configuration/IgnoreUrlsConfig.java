@@ -1,4 +1,4 @@
-package com.macro.cloud.config;
+package com.macro.cloud.configuration;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

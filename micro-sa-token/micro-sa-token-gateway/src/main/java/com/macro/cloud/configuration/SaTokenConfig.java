@@ -1,4 +1,4 @@
-package com.macro.cloud.config;
+package com.macro.cloud.configuration;
 
 import cn.dev33.satoken.reactor.context.SaReactorSyncHolder;
 import cn.dev33.satoken.reactor.filter.SaReactorFilter;
