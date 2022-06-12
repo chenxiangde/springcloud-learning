@@ -1,4 +1,4 @@
-package com.macro.cloud.common;
+package com.macro.cloud.configuration;
 
 import cn.dev33.satoken.exception.DisableLoginException;
 import cn.dev33.satoken.exception.NotLoginException;
