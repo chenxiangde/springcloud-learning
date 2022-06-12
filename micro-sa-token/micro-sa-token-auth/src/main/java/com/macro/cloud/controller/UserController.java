@@ -3,6 +3,8 @@ package com.macro.cloud.controller;
 import cn.dev33.satoken.stp.SaTokenInfo;
 import com.macro.cloud.api.CommonResult;
 import com.macro.cloud.service.UserServiceImpl;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,15 +13,19 @@ import java.util.Map;
 
 /**
  * 自定义Oauth2获取令牌接口
- * Created by macro on 2020/7/17.
+ * Created by cxd.
  */
+@Api(tags = "UserController", description = "获取令牌接口")
 @RestController
 @RequestMapping("/user")
 public class UserController {
+
     @Autowired
     private UserServiceImpl userService;
 
+    @ApiOperation(value = "登录以后返回token")
     @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @ResponseBody
     public CommonResult login(@RequestParam String username, @RequestParam String password) {
         SaTokenInfo saTokenInfo = userService.login(username, password);
         if (saTokenInfo == null) {
