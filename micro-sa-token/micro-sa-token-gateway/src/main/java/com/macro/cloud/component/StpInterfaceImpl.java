@@ -23,8 +23,8 @@ public class StpInterfaceImpl implements StpInterface {
     @Override
     public List<String> getRoleList(Object loginId, String loginType) {
         // 返回此 loginId 拥有的角色码列表
-        return null;
+        UserDTO userDTO = (UserDTO) StpUtil.getSession().get("userInfo");
+        return userDTO.getRoleList();
     }
 
 }
-
