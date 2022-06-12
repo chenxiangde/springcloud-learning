@@ -48,7 +48,13 @@
             <artifactId>micro-sa-token-common</artifactId>
             <version>1.0.0</version>
         </dependency>
-
+        <!-- servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 </project>
