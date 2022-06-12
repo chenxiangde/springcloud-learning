@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  * Created by cxd.
  */
 @Service
-public class UserServiceImpl{
+public class UserServiceImpl {
 
     private List<UserDTO> userList;
 
@@ -60,7 +60,7 @@ public class UserServiceImpl{
         // 密码校验成功后登录，一行代码实现登录
         StpUtil.login(userDTO.getId());
         // 将用户信息存储到Session中
-        StpUtil.getSession().set("userInfo",userDTO);
+        StpUtil.getSession().set("userInfo", userDTO);
         // 获取当前登录用户Token信息
         saTokenInfo = StpUtil.getTokenInfo();
         return saTokenInfo;
