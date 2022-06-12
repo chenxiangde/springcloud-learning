@@ -1,6 +1,5 @@
-package com.macro.cloud.configuration;
+package com.macro.cloud.common;
 
-import cn.dev33.satoken.exception.DisableLoginException;
 import cn.dev33.satoken.exception.NotLoginException;
 import cn.dev33.satoken.exception.NotPermissionException;
 import cn.dev33.satoken.exception.NotRoleException;
@@ -32,9 +31,6 @@ public class GlobalExceptionHandler {
                 return CommonResult.forbidden(ee.getMessage());
             } else if (e instanceof NotPermissionException) {// 如果是权限异常
                 NotPermissionException ee = (NotPermissionException) e;
-                return CommonResult.forbidden(ee.getMessage());
-            } else if (e instanceof DisableLoginException) {// 如果是被封禁异常
-                DisableLoginException ee = (DisableLoginException) e;
                 return CommonResult.forbidden(ee.getMessage());
             } else {// 普通异常，输出：500 + 异常信息
                 return CommonResult.failed(e.getMessage());
